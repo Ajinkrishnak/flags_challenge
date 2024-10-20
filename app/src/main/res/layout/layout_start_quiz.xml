@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="time"
+            type="String" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/font18sp600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/challenge_caps"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/font24sp600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/will_start_in_caps"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/font18sp600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@{time}"
+            android:textColor="@color/txt_grey"
+            android:textSize="28sp"
+            tools:text="00:20" />
+
+    </LinearLayout>
+</layout>

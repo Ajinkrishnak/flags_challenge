@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Flags Challenge</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flags_challenge_caps">FLAGS CHALLENGE</string>
+    <string name="schedule_caps">SCHEDULE</string>
+    <string name="save">Save</string>
+    <string name="hour">Hour</string>
+    <string name="second">Second</string>
+    <string name="minute">Minute</string>
+    <string name="score_caps">SCORE :</string>
+    <string name="game_over_caps">GAME OVER</string>
+    <string name="challenge_caps">CHALLENGE</string>
+    <string name="will_start_in_caps">WILL START IN</string>
+    <string name="correct_caps">CORRECT</string>
+    <string name="wrong_caps">WRONG</string>
+    <string name="qus">Guess the country from the flag ?</string>
+    <string name="next_qus_in">Next question in %s</string>
+    <string name="press_back_again_to_exit">Press back again to exit</string>
+    <string name="please_select_a_time">Please select a time</string>
+    <string name="the_scheduled_time_is_in_the_past">The scheduled time is in the past</string>
+    <string name="successfully_scheduled_please_wait_for_the_time">Successfully scheduled, Please wait for the time</string>
+</resources>

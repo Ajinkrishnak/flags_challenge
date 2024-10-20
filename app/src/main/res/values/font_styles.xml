@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="font6sp400">
+        <item name="android:textSize">6sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font8sp400">
+        <item name="android:textSize">8sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font10sp400">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font12sp400">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font14sp400">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font16sp400">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font18sp400">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font20sp400">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font22sp400">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font24sp400">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+    <style name="font10sp500">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font12sp500">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font14sp500">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font16sp500">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font18sp500">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font20sp500">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font22sp500">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font24sp500">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+    <style name="font8sp600">
+        <item name="android:textSize">8sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font10sp600">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font12sp600">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font14sp600">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font16sp600">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font18sp600">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font20sp600">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font22sp600">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font24sp600">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+    <style name="font10sp700">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font12sp700">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font14sp700">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font16sp700">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font18sp700">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font20sp700">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font22sp700">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font24sp700">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+</resources>

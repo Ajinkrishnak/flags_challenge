@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="clickHandler"
+            type="com.test.flagschallenge.ui.quiz.QuizClicks" />
+
+        <variable
+            name="viewModel"
+            type="com.test.flagschallenge.ui.quiz.QuizViewmodel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_qus_no"
+            style="@style/font12sp600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/qus_no_bg"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text='@{viewModel.qusNo.toString()}'
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15" />
+
+        <TextView
+            style="@style/font18sp600"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:text="@string/qus"
+            android:textColor="@color/txt_black"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_qus_no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_qus_no"
+            app:layout_constraintTop_toTopOf="@+id/tv_qus_no" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="123dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/box_bg"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_qus_no"
+            app:setImage="@{viewModel.flags.get(viewModel.questionsItem.countryCode)}"
+            tools:srcCompat="@drawable/flag_nz" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_flag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_flag"
+            app:layout_constraintTop_toTopOf="@+id/iv_flag">
+
+            <LinearLayout
+                android:id="@+id/ll_opt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/ll_opt2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/font12sp600"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.option1Clicked==true ? @drawable/btn_bg :viewModel.correctAns==1 ? @drawable/green_stroke_bg:@drawable/black_stroke_bg}"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingHorizontal="3dp"
+                    android:paddingVertical="4dp"
+                    android:text="@{viewModel.questionsItem.countries.get(0).countryName}"
+                    android:textColor="@{viewModel.option1Clicked==true ?@color/white:@color/txt_light_black}"
+                    app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.OPTION1)}"
+                    tools:background="@drawable/green_stroke_bg"
+                    tools:text="Option1" />
+
+                <TextView
+                    style="@style/font8sp400"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.correctAns==1?@string/correct_caps:@string/wrong_caps}"
+                    android:textColor="@{viewModel.correctAns==1?@color/green:@color/red}"
+                    android:visibility="@{viewModel.correctAns==1||viewModel.option1Clicked==true?View.VISIBLE:View.INVISIBLE}"
+                    tools:ignore="SmallSp"
+                    tools:text="CORRECT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_opt2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ll_opt1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/font12sp600"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.option2Clicked==true ? @drawable/btn_bg :viewModel.correctAns==2 ? @drawable/green_stroke_bg:@drawable/black_stroke_bg}"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="3dp"
+                    android:text="@{viewModel.questionsItem.countries.get(1).countryName}"
+                    android:textColor="@{viewModel.option2Clicked==true ?@color/white:@color/txt_light_black}"
+                    app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.OPTION2)}"
+                    tools:background="@drawable/black_stroke_bg"
+                    tools:text="Option2" />
+
+                <TextView
+                    style="@style/font8sp400"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.correctAns==2?@string/correct_caps:@string/wrong_caps}"
+                    android:textColor="@{viewModel.correctAns==2?@color/green:@color/red}"
+                    android:visibility="@{viewModel.correctAns==2||viewModel.option2Clicked==true?View.VISIBLE:View.INVISIBLE}"
+                    tools:ignore="SmallSp"
+                    tools:text="CORRECT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_opt3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/ll_opt4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_opt1">
+
+                <TextView
+                    style="@style/font12sp600"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.option3Clicked==true ? @drawable/btn_bg :viewModel.correctAns==3 ? @drawable/green_stroke_bg:@drawable/black_stroke_bg}"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="3dp"
+                    android:text="@{viewModel.questionsItem.countries.get(2).countryName}"
+                    android:textColor="@{viewModel.option3Clicked==true ?@color/white:@color/txt_light_black}"
+                    app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.OPTION3)}"
+                    tools:background="@drawable/black_stroke_bg"
+                    tools:text="Option3" />
+
+                <TextView
+                    style="@style/font8sp400"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.correctAns==3?@string/correct_caps:@string/wrong_caps}"
+                    android:textColor="@{viewModel.correctAns==3?@color/green:@color/red}"
+                    android:visibility="@{viewModel.correctAns==3||viewModel.option3Clicked==true?View.VISIBLE:View.INVISIBLE}"
+                    tools:ignore="SmallSp"
+                    tools:text="CORRECT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_opt4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ll_opt3"
+                app:layout_constraintTop_toTopOf="@+id/ll_opt3">
+
+                <TextView
+                    style="@style/font12sp600"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.option4Clicked==true ? @drawable/btn_bg :viewModel.correctAns==4 ? @drawable/green_stroke_bg:@drawable/black_stroke_bg}"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="3dp"
+                    android:text="@{viewModel.questionsItem.countries.get(3).countryName}"
+                    android:textColor="@{viewModel.option4Clicked==true ?@color/white:@color/txt_light_black}"
+                    app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.OPTION4)}"
+                    tools:background="@drawable/black_stroke_bg"
+                    tools:text="Option4" />
+
+                <TextView
+                    style="@style/font8sp400"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.correctAns==4?@string/correct_caps:@string/wrong_caps}"
+                    android:textColor="@{viewModel.correctAns==4?@color/green:@color/red}"
+                    android:visibility="@{viewModel.correctAns==4||viewModel.option4Clicked==true?View.VISIBLE:View.INVISIBLE}"
+                    tools:ignore="SmallSp"
+                    tools:text="CORRECT" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

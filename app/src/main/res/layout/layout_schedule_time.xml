@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.test.flagschallenge.ui.home.HomesClicks" />
+
+        <variable
+            name="viewModel"
+            type="com.test.flagschallenge.ui.home.HomeViewmodel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_schedule"
+            style="@style/font18sp700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/schedule_caps"
+            android:textAppearance="@style/shadowStyle"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hour"
+            style="@style/font12sp400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hour"
+            android:textAppearance="@style/shadowStyle"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/ll_hour"
+            app:layout_constraintStart_toStartOf="@+id/ll_hour"
+            app:layout_constraintTop_toBottomOf="@+id/tv_schedule" />
+
+        <LinearLayout
+            android:id="@+id/ll_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/ll_minute"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hour"
+            app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.HOUR)}">
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.hours.first.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.hours.second.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_minute"
+            style="@style/font12sp400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minute"
+            android:textAppearance="@style/shadowStyle"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/ll_minute"
+            app:layout_constraintStart_toStartOf="@+id/ll_minute"
+            app:layout_constraintTop_toTopOf="@+id/tv_hour" />
+
+        <LinearLayout
+            android:id="@+id/ll_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/ll_second"
+            app:layout_constraintStart_toEndOf="@+id/ll_hour"
+            app:layout_constraintTop_toTopOf="@+id/ll_hour"
+            app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.MINUTE)}">
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.minutes.first.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.minutes.second.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_second"
+            style="@style/font12sp400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second"
+            android:textAppearance="@style/shadowStyle"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/ll_second"
+            app:layout_constraintStart_toStartOf="@+id/ll_second"
+            app:layout_constraintTop_toTopOf="@+id/tv_hour" />
+
+        <LinearLayout
+            android:id="@+id/ll_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll_minute"
+            app:layout_constraintTop_toTopOf="@+id/ll_hour"
+            app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.SECOND)}">
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.seconds.first.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+
+            <TextView
+                style="@style/font18sp700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_box_bg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:text="@{viewModel.seconds.second.toString()}"
+                android:textColor="@color/txt_grey"
+                android:textSize="28sp"
+                tools:text="0" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/font18sp600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="33dp"
+            android:paddingVertical="4dp"
+            android:text="@string/save"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_minute"
+            app:setOnclick="@{(view) ->viewModel.itemClicked(clickHandler.SAVE)}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
